@@ -1,0 +1,215 @@
+:root {
+    --primary: #2563eb;
+    --surface: #ffffff;
+    --background: #f8fafc;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --border-color: #e5e7eb;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+    --surface: #1e293b;
+    --background: #0f172a;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --border-color: #334155;
+}
+
+/* Blue Theme */
+[data-theme="blue"] {
+    --primary: #3b82f6;
+    --surface: #ffffff;
+    --background: #e0f2fe;
+    --text-primary: #1e3a8a;
+    --text-secondary: #3b82f6;
+    --border-color: #bfdbfe;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background);
+    color: var(--text-primary);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app-header {
+    background: var(--surface);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1.5rem 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-title {
+    font-size: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+}
+
+.theme-switcher {
+    display: flex;
+    gap: 1rem;
+}
+
+.theme-button {
+    padding: 0.75rem 1.25rem;
+    border: 1px solid var(--border-color);
+    background: var(--surface);
+    color: var(--text-primary);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.theme-button:hover {
+    background-color: var(--border-color);
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.projects-section {
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: var(--surface);
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+}
+
+.project-media {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.project-title {
+    font-size: 1.75rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.project-details {
+    padding: 1.5rem;
+}
+
+.project-description {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.project-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.download-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--primary);
+    color: white;
+    padding: 0.95rem 2rem;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.download-button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.download-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.app-footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-top: 4rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.social-links {
+    margin-bottom: 1.5rem;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 1.25rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-family: 'Roboto', sans-serif;
+}
+
+.social-links a:hover {
+    color: var(--primary);
+}
